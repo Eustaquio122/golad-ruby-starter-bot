@@ -6,7 +6,7 @@ class Action
 
   def new_action(timebank, info)
     update_info(timebank, info) # stores all required info locally
-    make_move 
+    make_move
   end
 
   private

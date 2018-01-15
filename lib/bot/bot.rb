@@ -18,7 +18,7 @@ class Bot
     formatted_line = @formatter.format_input(line) #returns an array with each input element formatted
     case formatted_line.shift #removes first element of the array for evaluation
     when 'action'
-      print @formatter.format_output(action(formatted_line.last)) # requests a new action with last element of array [timebank], formats action output, and send it to stdout
+      print @formatter.format_output(action(formatted_line.last)) # requests a new action with last element of array [timebank], formats action output, and sends it to stdout
     when 'settings', 'update'
       @state.update_info(formatted_line) # sends array with instructions to state if 'settings' ot 'update'
     when 'quit'
@@ -27,6 +27,6 @@ class Bot
   end
 
   def action(timebank)
-    @action.new_action(timebank.to_i, @state.info) # calls action with timebank, and hash with updated info from state
+    @action.new_action(timebank.to_i, @state.info) # calls action with timebank and updated @info hash State
   end
 end

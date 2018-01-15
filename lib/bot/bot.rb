@@ -6,17 +6,17 @@ class Bot
   end
 
   def run
-    while line = gets # reads lines from stdin
-      line.chomp == '' || parse(line.chomp) #parses each non-empty line
+    while (line = gets) # reads lines from stdin
+      line.chomp == '' || parse(line.chomp) # parses each non-empty line
     end
-    run #re-launches listener
+    run # re-launches listener
   end
 
   private
 
   def parse(line)
-    formatted_line = @formatter.format_input(line) #returns an array with each input element formatted
-    case formatted_line.shift #removes first element of the array for evaluation
+    formatted_line = @formatter.format_input(line) # returns an array with each input element formatted
+    case formatted_line.shift # removes first element of the array for evaluation
     when 'action'
       print @formatter.format_output(action(formatted_line.last)) # requests a new action with last element of array [timebank], formats action output, and sends it to stdout
     when 'settings', 'update'

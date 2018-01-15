@@ -6,6 +6,6 @@ class Formatter
   end
 
   def format_output(action)
-    action.join(' ') + "\n" # converts array with action instructions into an output string, adding /n
+    action.join(' ') + "\n" # converts array with action instructions into an output string, adding \n
   end
 end

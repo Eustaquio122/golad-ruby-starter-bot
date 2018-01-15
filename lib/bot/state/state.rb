@@ -8,7 +8,7 @@ class State
     }
   end
 
-  def update_info(args) # receives array with input string elements minus first ('settings'/'update' has been reomved at this point)
+  def update_info(args) # receives array with input string elements minus first ('settings'/'update' has been removed at this point)
     return handle_game(args) if args[0] == 'game' # handles 'update game' instructions if first element in array is 'game'
     return assign_your_bot(args) if args[0] == 'your_bot' # calls method to assign your bot name for 'settings your_bot p'
     return handle_player(args) if args[0].include?('player') # calls method to handle 'update p ...' instructions

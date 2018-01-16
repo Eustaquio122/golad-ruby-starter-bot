@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# Written by Eustaquio122, peterwdj, RobertClayton, and SuzanneHuldt
+
 require_relative 'lib/bot/bot'
 require_relative 'lib/bot/formatter'
 require_relative 'lib/bot/state/state'
